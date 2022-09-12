@@ -44,8 +44,8 @@ class Server{
 
     listen(){
         
-       this. app.listen(8082,()=>{
-         console.log(`Example app listening at http://localhost:8082`)
+       this. app.listen(this.port,()=>{
+         console.log(`Example app listening at http://localhost:${this.port}`)
   })
     }
 
