@@ -1,5 +1,6 @@
 
 const {Schema, model} =require('mongoose');
+const { usuariosDelete } = require('../controllers/usuarios');
 const UsuarioSchema = Schema({
     nombre: {
             type: String,
@@ -34,7 +35,8 @@ const UsuarioSchema = Schema({
 });
 
 UsuarioSchema.methods.toJSON = function(){
-    const{__v,password,...user}=this.toObject();
+    const{__v,password,_id,...user}=this.toObject();
+    user.uid=_id;
     return user;
 }
 
