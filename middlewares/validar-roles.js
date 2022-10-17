@@ -24,7 +24,6 @@ const esAdminRole=(req=request,res=response,next)=>{
 const tieneRole =(...roles)=>{
 
 
-
     return (req,res=response,next)=>{
         
         if(!req.usuario){
@@ -44,7 +43,6 @@ const tieneRole =(...roles)=>{
     }
 
 
-    
 }
 
 module.exports={
