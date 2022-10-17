@@ -14,7 +14,7 @@ const esAdminRole=(req=request,res=response,next)=>{
 
     if (rol!== 'ADMIN_ROLE' ){
         returnres.status(401).json({
-            msg:`${nombre} no es un admin`
+            msg:`${nombre} no es un admin real mentiroso`
         });
     }
     next();
